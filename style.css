@@ -173,3 +173,28 @@ button:active {
     background-size: contain;
 
 }
+@media screen and (max-width: 760px) {
+
+    .container {
+        height: 60%;
+        width: 70%;
+        padding: 30px;
+    }
+    .buttons {
+        width: 80%;
+    }
+    h4{
+        margin: 5px;
+    }
+    h2{
+        font-size: 18px !important;
+    }
+    h1{
+        font-size: 24px !important;
+    }td {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
