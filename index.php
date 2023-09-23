@@ -15,7 +15,6 @@ if ($currentMonth < 1) {
     $currentYear++; 
 }
 
-//Get the name of the month based on $currentMonth
 $currentMonthName = date('F', mktime(0, 0, 0, $currentMonth, 1, date('Y')));
 
 function calculateDayofMonth($n)
