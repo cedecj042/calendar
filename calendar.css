@@ -12,6 +12,7 @@
     font-family: PoppinsMedium;
     src: url(Poppins/Poppins-Medium.ttf);
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -22,9 +23,10 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: Poppins;
     color: #110b2b;
     gap: 20px;
+
 }
 
 .container {
@@ -46,14 +48,15 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 650px;
+    width: 750px;
     height: 60px;
     gap: 30px;
     margin-top: 20px;
+
 }
 
-button {
-    font-family: 'PoppinsSemi', sans-serif;
+form button {
+    font-family: PoppinsSemi;
     font-size: 16px;
     flex-grow: 1;
     border-radius: 15px;
@@ -62,7 +65,8 @@ button {
     position: relative;
     cursor: pointer;
     background: #dde4f9;
-    box-shadow: 6px 6px 17px #ced4e8, -6px -6px 17px #ecf4ff;
+    box-shadow:  6px 6px 17px #ced4e8,
+                 -6px -6px 17px #ecf4ff;
 }
 
 h1 {
@@ -71,7 +75,7 @@ h1 {
 }
 
 hr {
-    border: 1px solid rgba(71, 63, 175, 0.07);
+    border: 1px solid rgb(71 63 175 / 7%);
     width: 100%;
 }
 
@@ -89,6 +93,7 @@ tr {
     align-items: center;
     width: inherit;
     flex-grow: 1;
+
 }
 
 th h2 {
@@ -96,11 +101,11 @@ th h2 {
 }
 
 th {
-    width: calc(100% / 7);
+    width: 20%;
 }
 
 td {
-    width: calc(100% / 7);
+    width: 20%;
     height: 100%;
 }
 
@@ -116,37 +121,14 @@ tbody {
 
 .extra {
     color: #aeb6cf !important;
+    font-family: Poppins;
     font-weight: lighter;
 }
 
-/* Adjusted button positions */
-#previousMonth {
-    margin-left: 20px;
-}
-
-#today {
-    width: 100px;
-}
-
-#nextMonth {
-    margin-right: 20px;
-}
-
-/* Added button hover and active styles */
-button:hover {
-    background-color: #d1dbf7;
-}
-
-button:active {
-    background-color: #4815b8;
-}
-
-/* Centered today button text */
-#today span {
+form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    flex-grow: 1;
+    margin: 0;
 }
 .next{
     position: absolute;
@@ -172,4 +154,14 @@ button:active {
     background-repeat: no-repeat;
     background-size: contain;
 
+}
+.today {
+    width: 50%;
+}
+form button:hover{
+
+    background-color: #d1dbf7;
+}
+form button:active{
+    background-color: #4815b8;
 }

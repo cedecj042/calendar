@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="currentMonthYear"></h1>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th><h2>Sun</h2></th>
+                    <th><h2>Mon</h2></th>
+                    <th><h2>Tue</h2></th>
+                    <th><h2>Wed</h2></th>
+                    <th><h2>Thu</h2></th>
+                    <th><h2>Fri</h2></th>
+                    <th><h2>Sat</h2></th>
+                </tr>
+            </thead>
+            <tbody id="calendarBody"></tbody>
+        </table>
+    </div>
+    <div class="buttons">
+        <button id="previousMonth"><i class="previous"></i></button>
+        <button id="today"><span>Today</span></button>
+        <button id="nextMonth"><i class="next"></i></button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
