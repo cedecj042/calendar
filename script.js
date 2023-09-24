@@ -14,27 +14,30 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateCalendar() {
         // Clear previous calendar
         calendarBody.innerHTML = "";
-
+    
+        // Get the current date
+        const currentDate = new Date();
+    
         // Update the current month and year heading
         currentMonthYear.textContent = new Date(currentYear, currentMonth - 1, 1)
             .toLocaleString('en-US', { month: 'long', year: 'numeric' });
-
+    
         // Determine the first day of the current month
         const firstDayOfMonth = new Date(currentYear, currentMonth - 1, 1).getDay();
-
+    
         // Calculate the number of days in the current month
         const daysInMonth = new Date(currentYear, currentMonth, 0).getDate();
-
+    
         let dayCounter = 1;
         let extraCounter = 1;
-
+    
         // Create the calendar
         for (let i = 0; i < 6; i++) {
             const row = document.createElement("tr");
             for (let j = 0; j < 7; j++) {
                 const cell = document.createElement("td");
                 const day = document.createElement("h4");
-
+    
                 if (dayCounter === 1) {
                     if (i === 0 && j === firstDayOfMonth) {
                         day.textContent = dayCounter++;
@@ -45,18 +48,26 @@ document.addEventListener("DOMContentLoaded", function() {
                 } else {
                     if (dayCounter <= daysInMonth) {
                         day.textContent = dayCounter++;
+    
+                        // Check if the current day matches the generated day
+                        if (currentDate.getDate() === dayCounter - 1 &&
+                            currentDate.getMonth() === currentMonth - 1 &&
+                            currentDate.getFullYear() === currentYear) {
+                            day.classList.add("highlight"); // Add a class to highlight the current day
+                        }
                     } else {
                         day.textContent = extraCounter++;
                         day.classList.add("extra");
                     }
                 }
-
+    
                 cell.appendChild(day);
                 row.appendChild(cell);
             }
             calendarBody.appendChild(row);
         }
     }
+    
 
     // Event listeners for navigation buttons
     previousMonthButton.addEventListener("click", () => {

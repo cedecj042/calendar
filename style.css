@@ -103,10 +103,15 @@ th {
 td {
     width: calc(100% / 7);
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 td h4 {
     text-align: center;
+    margin: 0;
+    padding: 1.33em 0;
 }
 
 tbody {
@@ -175,6 +180,11 @@ button:active {
     background-repeat: no-repeat;
     background-size: contain;
 
+}
+.highlight{
+    background: #c6d5ff;
+    padding: 10px 12px;
+    border-radius: 47px;
 }
 
 @media screen and (max-width: 760px) {
