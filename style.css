@@ -12,6 +12,7 @@
     font-family: PoppinsMedium;
     src: url(Poppins/Poppins-Medium.ttf);
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -148,7 +149,8 @@ button:active {
     align-items: center;
     height: 100%;
 }
-.next{
+
+.next {
     position: absolute;
     right: 40%;
     top: 28%;
@@ -160,7 +162,8 @@ button:active {
     background-repeat: no-repeat;
     background-size: contain;
 }
-.previous{
+
+.previous {
     position: absolute;
     right: 40%;
     top: 28%;
@@ -173,6 +176,7 @@ button:active {
     background-size: contain;
 
 }
+
 @media screen and (max-width: 760px) {
 
     .container {
@@ -181,33 +185,46 @@ button:active {
         padding: 30px;
         margin-top: 6vh;
     }
+
     .buttons {
         width: 80%;
         margin: 0;
         gap: 10px !important;
     }
-    h4{
+
+    h4 {
         font-size: 12px !important;
         margin: 5px;
     }
-    h2{
+
+    h2 {
         font-size: 14px !important;
     }
-    h1{
+
+    h1 {
         font-size: 24px !important;
-    }td {
+    }
+
+    td {
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .buttons button{
+
+    .buttons button {
         flex-basis: 40px !important;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    button:nth-child(2){
+
+    button:nth-child(2) {
         flex-basis: 60px !important;
     }
-    
+
+    #today {
+        display: flex;
+        flex-grow: 1;
+    }
+}
 }
