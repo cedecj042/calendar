@@ -179,9 +179,12 @@ button:active {
         height: 60%;
         width: 70%;
         padding: 30px;
+        margin-top: 6vh;
     }
     .buttons {
         width: 80%;
+        margin: 0;
+        gap: 10px !important;
     }
     h4{
         font-size: 12px !important;
@@ -196,6 +199,15 @@ button:active {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .buttons button{
+        flex-basis: 40px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    button:nth-child(2){
+        flex-basis: 60px !important;
     }
     
 }
