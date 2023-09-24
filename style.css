@@ -216,6 +216,7 @@ button:active {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 150px;
     }
 
     button:nth-child(2) {
@@ -226,5 +227,5 @@ button:active {
         display: flex;
         flex-grow: 1;
     }
-}
+
 }
