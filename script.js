@@ -27,7 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
         // Calculate the number of days in the current month
         const daysInMonth = new Date(currentYear, currentMonth, 0).getDate();
-    
+        const daysInpreviousMonth = new Date(currentYear, currentMonth-1, 0).getDate();
+        let firstDayCounter = daysInpreviousMonth - firstDayOfMonth;
         let dayCounter = 1;
         let extraCounter = 1;
     
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     if (i === 0 && j === firstDayOfMonth) {
                         day.textContent = dayCounter++;
                     } else {
-                        day.textContent = extraCounter++;
+                        day.textContent = firstDayCounter++;
                         day.classList.add("extra");
                     }
                 } else {
